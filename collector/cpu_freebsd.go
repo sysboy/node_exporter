@@ -103,7 +103,7 @@ void freeCPUTimes(double *cpu_times) {
 */
 import "C"
 
-const maxCPUTimesLen = C.MAXCPU * C.CPUSTATES
+const maxCPUTimesLen = 64 * C.CPUSTATES
 
 type statCollector struct {
 	cpu *prometheus.CounterVec
